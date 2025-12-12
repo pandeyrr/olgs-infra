@@ -1,6 +1,5 @@
 resources:
   - deployment.yaml
   - service.yaml
+  - pvc.yaml
   - route.yaml
-commonLabels:
-  app: olgs-web

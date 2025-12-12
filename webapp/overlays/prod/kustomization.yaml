@@ -1,0 +1,4 @@
+resources:
+  - ../../base
+patchesStrategicMerge:
+  - patch-replicas.yaml   # optional, e.g., replicas: 2

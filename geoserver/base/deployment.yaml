@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: geoserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: geoserver
+  template:
+    metadata:
+      labels:
+        app: geoserver
+    spec:
+      containers:
+        - name: geoserver
+          image: quay.io/yourname/geoserver:latest
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - mountPath: /opt/geoserver/data_dir
+              name: geoserver-data
+      volumes:
+        - name: geoserver-data
+          persistentVolumeClaim:
+            claimName: geoserver-data

@@ -1,0 +1,10 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: olgs-web
+spec:
+  to:
+    kind: Service
+    name: olgs-web
+  port:
+    targetPort: 80

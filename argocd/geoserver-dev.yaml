@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: geoserver-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/pandeyrr/olgs-infra.git'
+    targetRevision: main
+    path: geoserver/overlays/dev
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: olgs-dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

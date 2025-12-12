@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: olgs-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: olgs-web
+  template:
+    metadata:
+      labels:
+        app: olgs-web
+    spec:
+      containers:
+        - name: olgs-web
+          image: quay.io/yourname/olgs-web:latest
+          ports:
+            - containerPort: 80
