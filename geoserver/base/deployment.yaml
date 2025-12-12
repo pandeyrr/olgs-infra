@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: geoserver
-          image: quay.io/yourname/geoserver:latest
+          image: docker.io/geoserver/geoserver:2.23.2
           ports:
             - containerPort: 8080
           volumeMounts:

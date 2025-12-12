@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: olgs-web
-          image: quay.io/yourname/olgs-web:latest
+          image: image-registry.openshift-image-registry.svc:5000/pandeyrr-dev/olgs-web:latest
           ports:
             - containerPort: 80

@@ -4,3 +4,8 @@ metadata:
   name: olgs-web
 spec:
   replicas: 1
+  template:
+    spec:
+      containers:
+        - name: olgs-web
+          image: image-registry.openshift-image-registry.svc:5000/pandeyrr-prod/olgs-web:latest

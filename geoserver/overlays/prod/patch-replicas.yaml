@@ -4,3 +4,8 @@ metadata:
   name: geoserver
 spec:
   replicas: 1
+  template:
+    spec:
+      containers:
+        - name: geoserver
+          image: image-registry.openshift-image-registry.svc:5000/pandeyrr-prod/geoserver:latest

@@ -8,10 +8,10 @@ spec:
   source:
     repoURL: 'https://github.com/pandeyrr/olgs-infra.git'
     targetRevision: main
-    path: geoserver/overlays/dev
+    path: 'geoserver/overlays/dev'
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: olgs-dev
+    namespace: pandeyrr-dev
   syncPolicy:
     automated:
       prune: true
